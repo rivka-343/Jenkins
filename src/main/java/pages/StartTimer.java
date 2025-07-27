@@ -17,6 +17,6 @@ public class StartTimer extends BasePage{
         elementToBeClickable(number8).click();
 
         if( visibilityOf(end).getText().contains(number8.getText()))
-            print(8);
+            System.out.print(8);
     }
 }
