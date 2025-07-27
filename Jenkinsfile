@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent  { label 'verisoft-2' }
 
     parameters {
         string(name: 'REPO_URL', defaultValue: 'https://github.com/user/repo.git', description: 'Git repository URL')
@@ -12,7 +12,7 @@ pipeline {
 
     triggers {
         cron('30 5 * * 1-5')
-        cron('0 14 * * *')
+        //cron('0 14 * * *')
     }
 
     stages {
